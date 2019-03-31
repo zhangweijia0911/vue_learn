@@ -20,4 +20,8 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+.hello {
+  color:red;
+}
+
 </style>

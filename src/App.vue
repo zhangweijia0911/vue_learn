@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
+    <div class="box">你好</div>
     <router-view/>
   </div>
 </template>
@@ -18,6 +19,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.box {
+  width:100px;
+  height:100px;
+  line-height: 100px;
+  text-align: center;
+  padding: 30px;
+  border: 10px solid #2c3e50;
+  box-sizing: content-box;
+  background-color: pink;
 }
 </style>

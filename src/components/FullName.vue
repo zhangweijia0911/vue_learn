@@ -28,6 +28,49 @@ export default {
         firstname:function(val){
             return this.fullname = val + '' + this.lastname
         }
+    },
+    beforeCreate:function(){
+        let p1 = new Promise(function(resolve,reject){
+            setTimeout(() => {
+                let rand = Math.random()
+                if(rand > 0.5){
+                    resolve('p1成功:'+rand)
+                }else{
+                    reject('p1失败:'+rand)
+                }
+            }, 500);
+        })
+        let p2 = new Promise(function(resolve,reject){
+            setTimeout(() => {
+                let rand = Math.random()
+                if(rand > 0.7){
+                    resolve('p2成功:'+rand)
+                }else{
+                    reject('p2失败:'+rand)
+                }
+            }, 500);
+        })
+        let p3 = new Promise(function(resolve,reject){
+            setTimeout(() => {
+                let rand = Math.random()
+                if(rand > 0.9){
+                    resolve('p3成功:'+rand)
+                }else{
+                    reject('p3失败:'+rand)
+                }
+            }, 500);
+        })
+        /* p1.then(function(resolve){
+            console.log(resolve)
+        }).catch(function(err){
+            console.log(err)
+        }) */
+        var allP = Promise.all([p1,p2,p3]).then(function(data){
+            alert('all'+data)
+        },function(err){
+            alert('all'+err)
+        })
+        console.log(allP)
     }
 
 }

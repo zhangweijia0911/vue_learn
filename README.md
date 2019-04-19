@@ -1,6 +1,7 @@
 # vue_learn
 
-> A Vue.js project
+> A Vue.js project 
+修改远程仓库
 
 ## Build Setup
 
